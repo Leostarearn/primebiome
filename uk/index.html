@@ -14,19 +14,24 @@
   <!-- ✅ Correct canonical URL -->
   <link rel="canonical" href="https://primebiome.leostarearn.com/uk/" />
 
-  <!-- Preload desktop image (default) -->
+  <<!-- Preload desktop image -->
 <link rel="preload" 
       as="image" 
-      href="primebiome-supplement.webp" 
+      href="primebiome-supplement-1104.webp" 
       type="image/webp" 
-      fetchpriority="high" />
+      fetchpriority="high" 
+      imagesrcset="primebiome-supplement-1104.webp 1104w" 
+      imagesizes="(min-width: 769px) 50vw, 100vw" />
 
-<!-- Optionally preload mobile image -->
+<!-- Preload mobile image (optional but smart) -->
 <link rel="preload" 
       as="image" 
-      href="primebiome-supplement-3.webp" 
+      href="primebiome-supplement-350.webp" 
       type="image/webp" 
-      media="(max-width: 768px)" />
+      media="(max-width: 768px)" 
+      imagesrcset="primebiome-supplement-350.webp 350w" 
+      imagesizes="100vw" />
+
 
 <!-- Open Graph for Facebook/LinkedIn -->
 <meta property="og:type" content="website" />
@@ -1143,22 +1148,29 @@ section ol {
   <div class="content-wrapper content-wrapper--hero">
     
     <!-- Image LEFT (desktop) -->
-    <div class="hero-image">
-      <picture>
-        <!-- Mobile image -->
-        <source srcset="primebiome-supplement-3.webp" media="(max-width: 768px)" type="image/webp" />
-        <!-- Desktop image -->
-        <img 
-          src="primebiome-supplement.webp" 
-          alt="PrimeBiome supplement" 
-          loading="eager" 
-          fetchpriority="high" 
-          decoding="async"
-          width="768" 
-          height="790"
-        />
-      </picture>
-    </div>
+<div class="hero-image">
+  <picture>
+    <!-- Mobile image -->
+    <source 
+      srcset="primebiome-supplement-3.webp" 
+      media="(max-width: 768px)" 
+      type="image/webp" />
+
+    <!-- Desktop image -->
+    <img 
+      src="primebiome-supplement.webp" 
+      alt="PrimeBiome supplement" 
+      loading="eager" 
+      fetchpriority="high" 
+      decoding="async"
+      width="1104" 
+      height="1127"
+      srcset="primebiome-supplement.webp 1104w"
+      sizes="(min-width: 769px) 50vw, 100vw"
+    />
+  </picture>
+</div>
+
 
     <!-- Text RIGHT -->
     <div class="hero-content">
@@ -1620,23 +1632,29 @@ src="money-back.webp"
   <!-- Centered content area -->
   <div class="content-wrapper">
     
-    <!-- Visual image -->
+   <!-- Visual image -->
 <div>
   <picture>
+    <!-- Mobile image -->
     <source 
       srcset="primebiome-supplement-3.webp" 
       media="(max-width: 768px)" 
       type="image/webp" />
+
+    <!-- Desktop image -->
     <img 
       src="primebiome-supplement.webp"
       alt="PrimeBiome supplement for bloating, skin, and gut health"
-      width="350"
-      height="350"
+      width="1104"
+      height="1127"
       loading="lazy"
       decoding="async"
+      srcset="primebiome-supplement.webp 1104w"
+      sizes="(min-width: 769px) 350px, 100vw"
       style="max-width:100%; height:auto; margin-top: 20px;" />
   </picture>
 </div>
+
 
     <!-- Short persuasive copy -->
     <p style="margin: 20px 0; font-size: 1.125rem;">
