@@ -924,17 +924,12 @@ section ol {
     margin-bottom: 16px;
   }
 
-  .money-back-image {
+  .money-back-image,
+  .money-back-badge {
     width: 100%;
     max-width: 300px;
     margin: 0 auto 24px;
     flex: 0 0 auto;
-  }
-
-  .money-back-badge {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
   }
 
   .money-back-section {
@@ -958,15 +953,7 @@ section ol {
     text-align: justify;
   }
 
-  .hero-image img {
-    max-width: 280px;
-    max-height: 400px;
-    height: auto;
-    aspect-ratio: 768 / 790;
-    object-fit: contain;
-  }
-
-  /* ✅ CLS Fix */
+  /* ✅ CLS Fix: Hero Image and Container */
   .hero-image {
     width: 100%;
     display: flex;
@@ -977,20 +964,27 @@ section ol {
 
   .hero-image img {
     width: 100%;
-    height: auto;
     max-width: 300px;
+    height: auto;
     aspect-ratio: 768 / 790;
-    display: block;
     object-fit: contain;
+    display: block;
   }
 
   .hero-content {
     min-height: 600px;
     contain: layout style;
     text-align: center;
-  padding: 0 10px;
+    padding: 0 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-image img {
+    max-width: 220px;
+  }
+}
+
 
 @media (max-width: 480px) {
   .hero-image img {
