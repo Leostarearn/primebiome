@@ -910,7 +910,6 @@ section ol {
     font-size: 1rem;
 }
 
-/* ========== [MQ-768] Mobile Layout Adjustments ========== */
 @media (max-width: 768px) {
   .money-back-flex {
     flex-direction: column;
@@ -964,6 +963,29 @@ section ol {
     height: auto;
     aspect-ratio: 768 / 790;
     object-fit: contain;
+  }
+
+  /* ✅ CLS Fix */
+  .hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    aspect-ratio: 768 / 790;
+    display: block;
+    object-fit: contain;
+  }
+
+  .hero-content {
+    min-height: 540px;
+    contain: layout style;
   }
 }
 
