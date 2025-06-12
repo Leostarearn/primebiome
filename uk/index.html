@@ -1010,7 +1010,7 @@ section ol {
     font-size: 1.4rem;
   }
 }
-/* ========== [MQ-Desktop 45/55 Fix] Hero Layout ≥ 901px ========== */
+/* ========== [MQ-Desktop 55/45 Fix] Hero Layout ≥ 901px ========== */
 @media (min-width: 901px) {
   .content-wrapper--hero {
     display: flex;
@@ -1023,23 +1023,41 @@ section ol {
   }
 
   .hero-image {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 55%;
+    max-width: 55%;
     margin: 0;
     text-align: center;
     padding: 0;
   }
 
+  .hero-image picture {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 768 / 790;
+    object-fit: contain;
+    display: block;
+    border: 4px solid green; /* 🧪 Debug: will show if rule works */
+  }
+
   .hero-content {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 45%;
+    max-width: 45%;
     margin: 0;
     padding-left: 0;
     padding-right: 0;
     text-align: left;
   }
 }
-    .hero-rating {
+
+/* Optional: Still outside media query — remains unchanged */
+.hero-rating {
   margin-top: 10px;
   font-size: 1.1rem;
   color: #353535;
