@@ -1010,47 +1010,48 @@ section ol {
     font-size: 1.4rem;
   }
 }
-/* ========== [MQ-Desktop 45/55 Fix] Hero Layout ≥ 901px ========== */
+/* Desktop Layout: 50/50 Image + Content */
 @media (min-width: 901px) {
   .content-wrapper--hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
   }
 
-  .hero-image {
-    flex: 0 0 50%;
-    max-width: 50%;
-    margin: 0;
-    text-align: center;
-    padding: 0;
-  }
-
-  .hero-image picture {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .hero-image img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 768 / 790;
-    object-fit: contain;
-  }
-
   .hero-content {
     flex: 0 0 50%;
     max-width: 50%;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
     text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .hero-image picture {
+    width: 100%;
+    display: block;
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 768 / 790;
   }
 
   .hero-rating {
@@ -1061,7 +1062,6 @@ section ol {
     text-align: left;
   }
 }
-
 
   </style>
 
@@ -1152,31 +1152,16 @@ section ol {
   
 <section class="hero full-width-section" aria-label="PrimeBiome Product Introduction">
   <div class="content-wrapper content-wrapper--hero">
-    <div class="hero-image">
-  <picture>
-    <!-- Show 300x300 image on small screens -->
-    <source srcset="primebiome-supplement-3.webp" media="(max-width: 768px)" type="image/webp" />
-    
-    <!-- Fallback: full-size desktop image -->
-    <img 
-      src="primebiome-supplement.webp" 
-      alt="PrimeBiome supplement" 
-      loading="eager" 
-      fetchpriority="high" 
-      decoding="async"
-      width="768" 
-      height="790"
-    />
-  </picture>
-</div>
 
-    </div>
+    <!-- ✅ Content FIRST -->
     <div class="hero-content">
       <h1>Primebiome: Gut Health, Glowing Skin</h1>
       <p class="subheadline">
-    Did you know your gut and skin health are closely connected?  
-    Your gut influences inflammation, digestion, and even how radiant your skin looks. <strong>PrimeBiome</strong> helps restore your gut’s balance with clinically proven probiotics, supporting a glowing complexion and overall vitality.
-  </p>
+        Did you know your gut and skin health are closely connected?  
+        Your gut influences inflammation, digestion, and even how radiant your skin looks. 
+        <strong>PrimeBiome</strong> helps restore your gut’s balance with clinically proven probiotics, 
+        supporting a glowing complexion and overall vitality.
+      </p>
       <ul>
         <li><strong>Radiant, youthful skin</strong> — naturally</li>
         <li>Healthy <strong>gut</strong>, happy <strong>digestion</strong></li>
@@ -1184,7 +1169,7 @@ section ol {
         <li><strong>Reduce bloating</strong> & <strong>inflammation</strong></li>
         <li><strong>Support healthy aging</strong> every day</li>
       </ul>
-        <p><strong style="text-decoration: underline;">Try Prime Biome For Over 70% OFF Today!</strong></p>
+      <p><strong style="text-decoration: underline;">Try Prime Biome For Over 70% OFF Today!</strong></p>
       <div class="hero-cta">
         <a href="#" class="btn-primary">GET A DISCOUNT 70% OFF</a>
         <div class="hero-rating">
@@ -1192,8 +1177,28 @@ section ol {
         </div>
       </div>
     </div>
+
+    <!-- ✅ Image SECOND -->
+    <div class="hero-image">
+      <picture>
+        <!-- Mobile image -->
+        <source srcset="primebiome-supplement-3.webp" media="(max-width: 768px)" type="image/webp" />
+        <!-- Desktop fallback -->
+        <img 
+          src="primebiome-supplement.webp" 
+          alt="PrimeBiome supplement" 
+          loading="eager" 
+          fetchpriority="high" 
+          decoding="async"
+          width="768" 
+          height="790"
+        />
+      </picture>
+    </div>
+
   </div>
 </section>
+
 
 <!-- Section: What Is PrimeBiome? -->
 <section id="what-is-primebiome" class="full-width-section">
