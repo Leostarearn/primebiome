@@ -1150,12 +1150,12 @@ section ol {
 <section class="hero full-width-section" aria-label="PrimeBiome Product Introduction">
   <div class="content-wrapper content-wrapper--hero">
     
-    <!-- Image LEFT (desktop) -->
+   <!-- Image LEFT (desktop and mobile) -->
 <div class="hero-image">
   <picture>
     <!-- Mobile image -->
     <source 
-      srcset="primebiome-supplement-3.webp" 
+      srcset="primebiome-supplement-3.webp 600w" 
       media="(max-width: 768px)" 
       type="image/webp" />
 
@@ -1168,8 +1168,11 @@ section ol {
       decoding="async"
       width="1104" 
       height="1127"
-      srcset="primebiome-supplement.webp 1104w"
-      sizes="(min-width: 769px) 50vw, 100vw"
+      srcset="
+        primebiome-supplement-3.webp 600w,
+        primebiome-supplement.webp 1104w
+      "
+      sizes="(max-width: 768px) 100vw, 50vw"
     />
   </picture>
 </div>
