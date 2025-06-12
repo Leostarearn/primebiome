@@ -153,16 +153,16 @@ h1, h2, h4, h5, h6 {
 }
 
 .hero-image img {
-  width: 100%;                  /* Let it scale within container */
-  max-width: 100%;             /* Set visual max size for desktop/tablet */
-  height: auto;                 /* Let it scale proportionally */
+  width: 100%;                 /* Let image scale to fit container width */
+  max-width: 300px;            /* Cap image width on mobile */
+  height: auto;                /* Maintain aspect ratio */
+  aspect-ratio: 768 / 790;     /* Pre-allocates space for mobile */
   object-fit: contain;
-  aspect-ratio: 1104 / 1127; /* maintains space before image loads */
   display: block;
 
+  /* ✅ Extra protection for CLS fallback */
+  min-height: 300px;
 }
-
-
 
 .hero-content {
   flex: 0 0 50%;
@@ -189,6 +189,7 @@ h1, h2, h4, h5, h6 {
   line-height: 1.5;
   margin-top: 10px;
   max-width: 600px;
+  min-height: 150px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -954,6 +955,16 @@ section ol {
   }
 
   /* ✅ CLS Fix: Hero Image and Container */
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .hero-image {
     width: 100%;
     display: flex;
@@ -969,15 +980,35 @@ section ol {
     aspect-ratio: 768 / 790;
     object-fit: contain;
     display: block;
+    min-height: 290px; /* ✅ Prevents CLS */
   }
 
   .hero-content {
-    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 650px;
     contain: layout style;
     text-align: center;
     padding: 0 10px;
   }
-}
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-content p,
+  .hero-content ul,
+  .hero-content li,
+  .hero-cta {
+    text-align: center;
+  }
+
+  .hero-rating {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
 
 @media (max-width: 480px) {
   .hero-image img {
@@ -1038,19 +1069,11 @@ section ol {
     padding: 40px 20px;
   }
 
-  .hero-content {
-    flex: 0 0 58%;
-    max-width: 58%;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-  }
-
   .hero-image {
     flex: 0 0 42%;
     max-width: 42%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;  /* ✅ Image left-aligned */
     align-items: center;
     padding: 0;
     margin: 0;
@@ -1068,6 +1091,14 @@ section ol {
     height: auto;
     object-fit: contain;
     aspect-ratio: 768 / 790;
+  }
+
+  .hero-content {
+    flex: 0 0 58%;
+    max-width: 58%;
+    text-align: left;
+    padding-left: 30px;  /* ✅ Adds spacing between image and text */
+    margin: 0;
   }
 
   .hero-rating {
