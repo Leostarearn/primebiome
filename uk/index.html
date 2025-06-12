@@ -14,17 +14,19 @@
   <!-- ✅ Correct canonical URL -->
   <link rel="canonical" href="https://primebiome.leostarearn.com/uk/" />
 
-  <!-- Preload Hero Images -->
+  <!-- Preload desktop image (default) -->
 <link rel="preload" 
       as="image" 
       href="primebiome-supplement.webp" 
       type="image/webp" 
       fetchpriority="high" />
 
+<!-- Optionally preload mobile image -->
 <link rel="preload" 
       as="image" 
       href="primebiome-supplement-3.webp" 
-      type="image/webp" />
+      type="image/webp" 
+      media="(max-width: 768px)" />
 
 <!-- Open Graph for Facebook/LinkedIn -->
 <meta property="og:type" content="website" />
@@ -1034,6 +1036,14 @@ section ol {
   font-weight: 600;
   text-align: left;
 }
+    @media (min-width: 769px) {
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 768 / 790;
+    object-fit: contain;
+  }
+}
 
   </style>
 
@@ -1126,19 +1136,20 @@ section ol {
   <div class="content-wrapper content-wrapper--hero">
     <div class="hero-image">
   <picture>
-    <source 
-      srcset="primebiome-supplement-3.webp" 
-      media="(max-width: 768px)" 
-      type="image/webp" />
+    <!-- Show 300x300 image on small screens -->
+    <source srcset="primebiome-supplement-3.webp" media="(max-width: 768px)" type="image/webp" />
+    
+    <!-- Fallback: full-size desktop image -->
     <img 
       src="primebiome-supplement.webp" 
-      alt="PrimeBiome supplement for gut and skin health" 
+      alt="PrimeBiome supplement" 
       loading="eager" 
       fetchpriority="high" 
-      decoding="async" 
+      decoding="async"
       width="768" 
       height="790"
-      style="max-width: 100%; height: auto;" />
+      style="width: 100%; height: auto; aspect-ratio: 768 / 790; object-fit: contain;"
+    />
   </picture>
 </div>
 
