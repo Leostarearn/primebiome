@@ -1152,10 +1152,28 @@ section ol {
   
 <section class="hero full-width-section" aria-label="PrimeBiome Product Introduction">
   <div class="content-wrapper content-wrapper--hero">
+    
+    <!-- Image LEFT (desktop) -->
+    <div class="hero-image">
+      <picture>
+        <!-- Mobile image -->
+        <source srcset="primebiome-supplement-3.webp" media="(max-width: 768px)" type="image/webp" />
+        <!-- Desktop image -->
+        <img 
+          src="primebiome-supplement.webp" 
+          alt="PrimeBiome supplement" 
+          loading="eager" 
+          fetchpriority="high" 
+          decoding="async"
+          width="768" 
+          height="790"
+        />
+      </picture>
+    </div>
 
-    <!-- ✅ Content FIRST -->
+    <!-- Text RIGHT -->
     <div class="hero-content">
-      <h1>Primebiome: Gut Health, Glowing Skin</h1>
+      <h1>PrimeBiome: Gut Health, Glowing Skin</h1>
       <p class="subheadline">
         Did you know your gut and skin health are closely connected?  
         Your gut influences inflammation, digestion, and even how radiant your skin looks. 
@@ -1173,32 +1191,13 @@ section ol {
       <div class="hero-cta">
         <a href="#" class="btn-primary">GET A DISCOUNT 70% OFF</a>
         <div class="hero-rating">
-          ⭐️⭐️⭐️⭐️⭐️ 4.9/5 rating from 15,000+ UK women<br />
+          ⭐️⭐️⭐️⭐️⭐️ 4.9/5 rating from 15,000+ UK women
         </div>
       </div>
     </div>
 
-    <!-- ✅ Image SECOND -->
-    <div class="hero-image">
-      <picture>
-        <!-- Mobile image -->
-        <source srcset="primebiome-supplement-3.webp" media="(max-width: 768px)" type="image/webp" />
-        <!-- Desktop fallback -->
-        <img 
-          src="primebiome-supplement.webp" 
-          alt="PrimeBiome supplement" 
-          loading="eager" 
-          fetchpriority="high" 
-          decoding="async"
-          width="768" 
-          height="790"
-        />
-      </picture>
-    </div>
-
   </div>
 </section>
-
 
 <!-- Section: What Is PrimeBiome? -->
 <section id="what-is-primebiome" class="full-width-section">
