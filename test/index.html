@@ -6,7 +6,7 @@
   <title>PrimeBiome – UK's Gut & Skin Probiotic for Women</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Discover how PrimeBiome, the UK’s #1 gut-skin probiotic, helps women over 35 beat bloating, fatigue, and aging skin with clinically proven ingredients." />
+  <meta name="description" content="Discover how PrimeBiome, the UK’s #1 gut-skin probiotic, helps women over 35 beat bloating, fatigue, and aging skin with clinically proven inds." />
   <meta name="keywords" content="PrimeBiome UK, gut health probiotic, women skin supplement, anti-aging gut formula, bloating and skin health UK" />
   <meta name="author" content="LeoStarEarn" />
   <meta name="robots" content="index, follow" />
@@ -32,7 +32,6 @@
       imagesrcset="primebiome-supplement-3.webp 350w" 
       imagesizes="100vw" />
 
-
 <!-- Open Graph for Facebook/LinkedIn -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Primebiome: Gut Health, Glowing Skin" />
@@ -45,7 +44,6 @@
 <meta name="twitter:title" content="PrimeBiome – UK's Trusted Gut + Skin Solution for Women 35+" />
 <meta name="twitter:description" content="Experience less bloating, better energy, and glowing skin with PrimeBiome. Scientifically proven probiotics for UK women." />
 <meta name="twitter:image" content="https://primebiome.leostarearn.com/uk/primebiome-supplement.webp" />
-
 
   <!-- Favicon -->
   <link rel="icon" href="https://primebiome.leostarearn.com/uk/favicon.ico" type="image/x-icon" />
@@ -129,7 +127,7 @@ h1, h2, h4, h5, h6 {
 }
 
 
-.hero {
+.mh{
   display: flex;
   align-items: center;
   width: 100%;
@@ -141,10 +139,10 @@ h1, h2, h4, h5, h6 {
   justify-content: space-between;
   text-align: left;
   flex-wrap: nowrap;
-  min-height: 700px; /* matches total hero section height */
+  min-height: 700px; /* matches total .mhsection height */
 }
 
-.hero-image {
+.mh-image {
   flex: 0 0 50%;     /* fixed 45% width */
   max-width: 50%;
   text-align: center;
@@ -152,19 +150,19 @@ h1, h2, h4, h5, h6 {
   margin: 0;
 }
 
-.hero-image img {
-  width: 100%;                  /* Let it scale within container */
-  max-width: 100%;             /* Set visual max size for desktop/tablet */
-  height: auto;                 /* Let it scale proportionally */
+.mh-image img {
+  width: 100%;                 /* Let image scale to fit container width */
+  max-width: 90%;            /* Cap image width on mobile */
+  height: auto;                /* Maintain aspect ratio */
+  aspect-ratio: 768 / 790;     /* Pre-allocates space for mobile */
   object-fit: contain;
-  aspect-ratio: 1104 / 1127; /* maintains space before image loads */
   display: block;
 
+  /* ✅ Extra protection for CLS fallback */
+  min-height: 300px;
 }
 
-
-
-.hero-content {
+.mh-content {
   flex: 0 0 50%;
   max-width: 50%;
   text-align: left;
@@ -173,7 +171,7 @@ h1, h2, h4, h5, h6 {
 
 }
 
-.hero-content h1 {
+.mh-content h1 {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
@@ -189,27 +187,28 @@ h1, h2, h4, h5, h6 {
   line-height: 1.5;
   margin-top: 10px;
   max-width: 600px;
+  min-height: 150px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.hero-content p {
+.mh-content p {
   font-size: 1.1rem;
   color: #4A4A4A;
 }
 
-.hero-content ul {
+.mh-content ul {
   list-style: disc;
   margin: 20px 0;
   padding-left: 20px;
   text-align: left;
 }
 
-.hero-content ul li {
+.mh-content ul li {
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 1.1rem;
 }
-    /* Container for button + rating text inside hero */
+    /* Container for button + rating text inside .mh*/
 .hero-cta {
   text-align: left;   /* center contents inside this container */
   margin-top: 10px;     /* spacing above */
@@ -226,7 +225,7 @@ h1, h2, h4, h5, h6 {
 }
 
 
-.hero-content ul li::marker {
+.mh-content ul li::marker {
   color: #EB787A;
 }
 
@@ -359,9 +358,9 @@ section ol {
   text-align: center;  /* keep center if you want */
   /* gap removed here */
 }
-    .content-wrapper--hero {
+    .content-wrapper--.mh{
   display: flex;
-  gap: 100px;              /* horizontal gap between hero image & text */
+  gap: 100px;              /* horizontal gap between .mhimage & text */
   align-items: center;
   justify-content: flex-start;
   flex-wrap: nowrap;
@@ -373,16 +372,16 @@ section ol {
   margin: 12px auto 0 auto;
 }
 
-  /* PrimeBiome Ingredients Section */
+  /* PrimeBiome inds Section */
     
-.ingredients-section {
+.inds-section {
   max-width: 1200px;
   margin: 0 auto 60px auto;
   padding: 0 20px;
   text-align: left;
 }
 
-.ingredients-intro {
+.inds-intro {
   font-size: 1.2rem;
   font-weight: 500;
   max-width: 1200px;
@@ -393,7 +392,7 @@ section ol {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.content-wrapper.ingredients-wrapper {
+.content-wrapper.inds-wrapper {
   display: block;
   text-align: left;
   max-width: 900px;
@@ -401,14 +400,14 @@ section ol {
   padding: 0 20px;
 }
 
-.ingredient-block {
+.ind-block {
   display: flex;
   align-items: flex-start;
   gap: 16px;
   margin-bottom: 40px;
 }
 
-.ingredient-number {
+.ind-number {
   flex: 0 0 48px;
   width: 48px;
   height: 48px;
@@ -424,11 +423,11 @@ section ol {
   margin-top: 5px;
 }
 
-.ingredient-text {
+.ind-text {
   flex: 1 1 auto;
 }
 
-.ingredient-heading {
+.ind-heading {
   font-size: 1.4rem;
   font-weight: 700;
   color: #353535;
@@ -437,7 +436,7 @@ section ol {
   text-align: left;
 }
 
-.ingredient-text p {
+.ind-text p {
   margin: 0;
   font-size: 1.1rem;
   color: #353535;
@@ -446,22 +445,22 @@ section ol {
 }
 
 
-    /* ========== Benefits Section ========== */
-.benefits-section {
+    /* ========== bens Section ========== */
+.bens-section {
   max-width: 1200px;
   margin: 0 auto 60px auto;
   padding: 0 20px;
   text-align: left;
 }
 
-.benefit-block {
+.ben-block {
   display: flex;
   align-items: flex-start;
   gap: 16px;
   margin-bottom: 40px;
 }
 
-.benefit-number {
+.ben-number {
   flex: 0 0 48px;
   width: 48px;
   height: 48px;
@@ -477,11 +476,11 @@ section ol {
   margin-top: 5px;
 }
 
-.benefit-text {
+.ben-text {
   flex: 1 1 auto;
 }
 
-.benefit-heading {
+.ben-heading {
   font-size: 1.4rem;
   font-weight: 700;
   color: #353535;
@@ -490,7 +489,7 @@ section ol {
   text-align: left;
 }
 
-.benefit-block p {
+.ben-block p {
   margin: 0;
   font-size: 1.1rem;
   color: #353535;
@@ -498,7 +497,7 @@ section ol {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.benefits-intro {
+.bens-intro {
   font-size: 1.2rem;
   font-weight: 500;
   max-width: 1200px;
@@ -509,7 +508,7 @@ section ol {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.content-wrapper.benefits-wrapper {
+.content-wrapper.bens-wrapper {
   display: block;
   text-align: left;
   max-width: 900px;
@@ -816,7 +815,7 @@ section ol {
 
 /* ========== [MQ-900] Main Layout and Typography Adjustments ========== */
 @media (max-width: 900px) {
-  .content-wrapper--hero {
+  .content-wrapper--.mh{
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -828,7 +827,7 @@ section ol {
     overflow-x: hidden;
   }
 
-  .hero {
+  .mh{
     flex-direction: column;
     padding: 40px 20px;
     gap: 50px;
@@ -838,8 +837,8 @@ section ol {
     overflow-x: hidden;
   }
 
-  .hero-image,
-  .hero-content {
+  .mh-image,
+  .mh-content {
     max-width: 100%;
     margin: 0 auto !important;
     text-align: center;
@@ -850,23 +849,23 @@ section ol {
     flex: none;
   }
 
-  .hero-content {
+  .mh-content {
     padding: 0 10px !important;
   }
 
-  .hero-content ul,
-  .hero-content li {
+  .mh-content ul,
+  .mh-content li {
     text-align: left;
   }
 
-  .hero-content h1,
-  .hero-content p,
-  .hero-content ul,
+  .mh-content h1,
+  .mh-content p,
+  .mh-content ul,
   .hero-cta {
     text-align: center;
   }
 
-  .hero-content h1 {
+  .mh-content h1 {
     font-size: 2.1rem;
   }
 
@@ -887,24 +886,24 @@ section ol {
     font-size: 1rem;
   }
 
-  .benefit-number,
+  .ben-number,
   .how-it-works-number,
-  .ingredient-number {
+  .ind-number {
     font-size: 2.2rem;
   }
 
-  .benefit-heading,
+  .ben-heading,
   .how-it-works-heading,
-  .ingredient-heading {
+  .ind-heading {
     font-size: 1.3rem;
   }
 
-  .benefit-block p,
+  .ben-block p,
   .how-it-works-block p,
-  .ingredient-text p {
+  .ind-text p {
     font-size: 1rem;
   }
-   /* ✅ NEW: Hero Rating Styling */
+   /* ✅ NEW: .mhRating Styling */
   .hero-rating {
     text-align: center;
     margin-top: 15px;
@@ -953,8 +952,18 @@ section ol {
     text-align: justify;
   }
 
-  /* ✅ CLS Fix: Hero Image and Container */
-  .hero-image {
+  /* ✅ CLS Fix: .mhImage and Container */
+  .mh{
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .mh-image {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -962,32 +971,45 @@ section ol {
     padding-bottom: 20px;
   }
 
-  .hero-image img {
+  .mh-image img {
     width: 100%;
     max-width: 300px;
     height: auto;
     aspect-ratio: 768 / 790;
     object-fit: contain;
     display: block;
+    min-height: 290px; /* ✅ Prevents CLS */
   }
 
-  .hero-content {
-    min-height: 600px;
+  .mh-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 650px;
     contain: layout style;
     text-align: center;
     padding: 0 10px;
   }
-}
 
-@media (max-width: 480px) {
-  .hero-image img {
-    max-width: 220px;
+  .mh-content h1 {
+    font-size: 2.1rem;
   }
-}
 
+  .mh-content p,
+  .mh-content ul,
+  .mh-content li,
+  .hero-cta {
+    text-align: center;
+  }
+
+  .hero-rating {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
 
 @media (max-width: 480px) {
-  .hero-image img {
+  .mh-image img {
     max-width: 220px;
   }
 }
@@ -1026,9 +1048,11 @@ section ol {
     font-size: 1.4rem;
   }
 }
+
+  
 /* Desktop Layout: 50/50 Image + Content */
 @media (min-width: 901px) {
-  .content-wrapper--hero {
+  .content-wrapper--.mh{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1038,36 +1062,38 @@ section ol {
     padding: 40px 20px;
   }
 
-  .hero-content {
-    flex: 0 0 58%;
-    max-width: 58%;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-  }
-
-  .hero-image {
+  .mh-image {
     flex: 0 0 42%;
     max-width: 42%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;  /* ✅ Image left-aligned */
     align-items: center;
     padding: 0;
     margin: 0;
     text-align: center;
   }
 
-  .hero-image picture {
+  .mh-image picture {
     width: 100%;
     display: block;
   }
 
-  .hero-image img {
+  .mh-image img {
     display: block;
     width: 100%;
     height: auto;
     object-fit: contain;
-    aspect-ratio: 768 / 790;
+    aspect-ratio: 1104 / 1127;
+    max-width: 400px; /* 🎯 Slightly smaller */
+    min-height: 300px; /* ✅ Prevent CLS */
+  }
+
+  .mh-content {
+    flex: 0 0 58%;
+    max-width: 58%;
+    text-align: left;
+    padding-left: 30px;  /* ✅ Adds spacing between image and text */
+    margin: 0;
   }
 
   .hero-rating {
@@ -1108,7 +1134,7 @@ section ol {
       "name": "How Many Bottles of PrimeBiome Should I Order?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most customers order 3 to 6 bottles to maximize the benefits of PrimeBiome over time. Our best value pack includes 6 bottles, free shipping, and 2 exclusive guides to help you get the most out of your supplement. Ordering in bulk saves money and ensures you don’t run out while experiencing results."
+        "text": "Most customers order 3 to 6 bottles to maximize the bens of PrimeBiome over time. Our best value pack includes 6 bottles, free shipping, and 2 exclusive guides to help you get the most out of your supplement. Ordering in bulk saves money and ensures you don’t run out while experiencing results."
       }
     },
     {
@@ -1159,18 +1185,18 @@ section ol {
       <ul class="nav-links" id="navLinks">
         <li><a href="#what-is-primebiome">Prime Biome</a></li>
         <li><a href="#who-is-this-for">Who Is This For</a></li>
-        <li><a href="#primebiome-benefits">Benefits</a></li>
+        <li><a href="#primebiome-bens">bens</a></li>
         <li><a href="#how-primebiome-works">How It Works?</a></li>
-        <li><a href="#primebiome-ingredients">Ingredients</a></li>
+        <li><a href="#primebiome-inds">inds</a></li>
       </ul>
     </div>
   </div>
   
-<section class="hero full-width-section" aria-label="PrimeBiome Product Introduction">
+<section class=".mhfull-width-section" aria-label="PrimeBiome Product Introduction">
   <div class="content-wrapper content-wrapper--hero">
     
    <!-- Image LEFT (desktop and mobile) -->
-<div class="hero-image">
+<div class=".mh-image">
   <picture>
     <!-- Mobile image -->
     <source 
@@ -1191,14 +1217,14 @@ section ol {
         primebiome-supplement-3.webp 600w,
         primebiome-supplement.webp 1104w
       "
-      sizes="(max-width: 768px) 100vw, 50vw"
+      sizes="(max-width: 768px) 100vw, (min-width: 769px) 600px"
     />
   </picture>
 </div>
 
 
     <!-- Text RIGHT -->
-    <div class="hero-content">
+    <div class=".mh-content">
       <h1>PrimeBiome</h1>
       <p class="subheadline">
         Did you know your gut and skin health are closely connected?  
@@ -1247,7 +1273,7 @@ section ol {
     <h3>Why PrimeBiome Is Different:</h3>
     <ul>
       <li><strong>Survivable Probiotics:</strong> Contains clinically proven <em>Bacillus coagulans</em> that survives harsh stomach acid, delivering live probiotics right where they’re needed most—in your gut.</li>
-      <li><strong>Powerful Skin-Nourishing Botanicals:</strong> Infused with potent ingredients like turmeric and astaxanthin that actively reduce skin redness, promote collagen production, and soothe inflammation for a youthful, glowing complexion.</li>
+      <li><strong>Powerful Skin-Nourishing Botanicals:</strong> Infused with potent inds like turmeric and astaxanthin that actively reduce skin redness, promote collagen production, and soothe inflammation for a youthful, glowing complexion.</li>
       <li><strong>Mental & Immune Support:</strong> Combines Lion’s Mane mushroom and zinc to boost cognitive function, improve mood, and strengthen your body’s natural defenses, so you feel balanced and resilient every day.</li>
       <li><strong>Gut-First Anti-Aging:</strong> By improving your gut health, PrimeBiome tackles aging at its root—helping reduce bloating, improve digestion, and enhance nutrient absorption for lasting vitality.</li>
       <li><strong>Clean, Safe, Daily Formula:</strong> Designed with your wellbeing in mind, PrimeBiome contains no fillers or harmful additives, making it gentle and effective for everyday use.</li>
@@ -1307,60 +1333,60 @@ section ol {
 
 
 
-  <!-- Section 3: PrimeBiome Benefits -->
-<section id="primebiome-benefits" class="full-width-section benefits-section" aria-label="PrimeBiome Benefits">
+  <!-- Section 3: PrimeBiome bens -->
+<section id="primebiome-bens" class="full-width-section bens-section" aria-label="PrimeBiome bens">
   <div class="section-header">
    <div class="inner">
-    <h2>PrimeBiome Benefits</h2>
+    <h2>PrimeBiome bens</h2>
   </div>
   </div>
 
-  <p class="benefits-intro">Discover how PrimeBiome supports your gut and skin health through clinically proven ingredients designed for lasting wellness.</p>
+  <p class="bens-intro">Discover how PrimeBiome supports your gut and skin health through clinically proven inds designed for lasting wellness.</p>
 
-  <div class="benefit-block">
-    <div class="benefit-number">1</div>
-    <div class="benefit-text">
-      <h3 class="benefit-heading">Reveals Radiant Skin by Restoring Gut Health</h3>
+  <div class="ben-block">
+    <div class="ben-number">1</div>
+    <div class="ben-text">
+      <h3 class="ben-heading">Reveals Radiant Skin by Restoring Gut Health</h3>
       <p>Your skin reflects your gut. PrimeBiome’s powerful probiotic strains restore gut balance, flushing out toxins that dull your complexion and cause redness, acne, or dryness. With a healthy gut, skin can finally repair itself from the inside out — for a hydrated, glowing appearance without harsh creams or chemicals.</p>
     </div>
   </div>
 
-  <div class="benefit-block">
-    <div class="benefit-number">2</div>
-    <div class="benefit-text">
-      <h3 class="benefit-heading">Reduces Bloating & Supports Smooth Digestion</h3>
+  <div class="ben-block">
+    <div class="ben-number">2</div>
+    <div class="ben-text">
+      <h3 class="ben-heading">Reduces Bloating & Supports Smooth Digestion</h3>
       <p>Say goodbye to that heavy, sluggish feeling. PrimeBiome promotes optimal digestion by replenishing beneficial bacteria, improving nutrient absorption, and calming your digestive system. The result? Less bloating, more regularity, and a flat, comfortable belly — naturally.</p>
     </div>
   </div>
 
-  <div class="benefit-block">
-    <div class="benefit-number">3</div>
-    <div class="benefit-text">
-      <h3 class="benefit-heading">Boosts Collagen & Skin Elasticity for Youthful Firmness</h3>
+  <div class="ben-block">
+    <div class="ben-number">3</div>
+    <div class="ben-text">
+      <h3 class="ben-heading">Boosts Collagen & Skin Elasticity for Youthful Firmness</h3>
       <p>Collagen breakdown is one of the key reasons skin starts to sag or wrinkle with age. PrimeBiome contains gut-repairing nutrients that directly support collagen synthesis, reducing the appearance of fine lines while improving skin’s bounce and firmness. It’s like a facelift from within.</p>
     </div>
   </div>
 
-  <div class="benefit-block">
-    <div class="benefit-number">4</div>
-    <div class="benefit-text">
-      <h3 class="benefit-heading">Balances Mood, Focus & Energy via the Gut-Brain Axis</h3>
+  <div class="ben-block">
+    <div class="ben-number">4</div>
+    <div class="ben-text">
+      <h3 class="ben-heading">Balances Mood, Focus & Energy via the Gut-Brain Axis</h3>
       <p>Your gut is your “second brain.” PrimeBiome helps regulate serotonin and cortisol through a healthy microbiome, improving mood, mental clarity, and energy. Customers often report better focus, calmer mornings, and more balanced emotions within the first few weeks.</p>
     </div>
   </div>
 
-  <div class="benefit-block">
-    <div class="benefit-number">5</div>
-    <div class="benefit-text">
-      <h3 class="benefit-heading">Reduces Inflammation That Speeds Up Aging</h3>
+  <div class="ben-block">
+    <div class="ben-number">5</div>
+    <div class="ben-text">
+      <h3 class="ben-heading">Reduces Inflammation That Speeds Up Aging</h3>
       <p>Chronic inflammation accelerates aging, damages skin cells, and stresses your gut. PrimeBiome is packed with anti-inflammatory compounds and antioxidant-rich strains that combat oxidative stress — keeping skin youthful, gut healthy, and energy stable throughout the day.</p>
     </div>
   </div>
 
-  <div class="benefit-block">
-    <div class="benefit-number">6</div>
-    <div class="benefit-text">
-      <h3 class="benefit-heading">Fast-Acting Formula with Visible Results in Weeks</h3>
+  <div class="ben-block">
+    <div class="ben-number">6</div>
+    <div class="ben-text">
+      <h3 class="ben-heading">Fast-Acting Formula with Visible Results in Weeks</h3>
       <p>Unlike other supplements that take months, PrimeBiome is clinically formulated to begin working in just weeks. Customers report less bloating, brighter skin, and improved digestion by day 14 — all with a single daily capsule that fits easily into your lifestyle.</p>
     </div>
   </div>
@@ -1374,7 +1400,7 @@ section ol {
   </div>
 
   <p class="how-it-works-intro">
-    Discover the science behind PrimeBiome’s unique formula that transforms your gut and skin health through powerful, natural ingredients.
+    Discover the science behind PrimeBiome’s unique formula that transforms your gut and skin health through powerful, natural inds.
   </p>
 
   <div class="how-it-works-block">
@@ -1413,7 +1439,7 @@ section ol {
     <div class="how-it-works-number">5</div>
     <div class="how-it-works-text">
       <h3 class="how-it-works-heading">Safe Daily Support for Long-Term Gut Health</h3>
-      <p>PrimeBiome is designed for safe daily use without side effects, working gradually to restore your gut’s natural balance and deliver lasting wellness benefits.</p>
+      <p>PrimeBiome is designed for safe daily use without side effects, working gradually to restore your gut’s natural balance and deliver lasting wellness bens.</p>
     </div>
   </div>
 
@@ -1430,94 +1456,94 @@ section ol {
   </p>
 </section>
   
-  <!-- Section: PrimeBiome Ingredients -->
-<section id="primebiome-ingredients" class="full-width-section ingredients-section" aria-label="PrimeBiome Ingredients">
+  <!-- Section: PrimeBiome inds -->
+<section id="primebiome-inds" class="full-width-section inds-section" aria-label="PrimeBiome inds">
   <div class="section-header">
            <div class="inner">
-    <h2>PrimeBiome Ingredients</h2>
+    <h2>PrimeBiome inds</h2>
   </div>
   </div>
 
-  <p class="ingredients-intro">
+  <p class="inds-intro">
     Each capsule of PrimeBiome is powered by science-backed herbs, fibers, and probiotics to transform your gut and skin health naturally.
   </p>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">1</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Bacillus Coagulans</h3>
+  <div class="ind-block">
+    <div class="ind-number">1</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Bacillus Coagulans</h3>
       <p>A resilient probiotic that restores healthy gut flora, improving digestion while reducing bloating, constipation, and inflammation. It’s essential for balancing your microbiome and promoting clearer, healthier skin from within.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">2</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Dandelion Root</h3>
+  <div class="ind-block">
+    <div class="ind-number">2</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Dandelion Root</h3>
       <p>This natural detoxifier supports liver function and flushes out toxins that can dull your complexion. Rich in antioxidants, it helps rejuvenate skin and defend against environmental damage for a radiant glow.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">3</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Babchi (Psoralea Corylifolia)</h3>
+  <div class="ind-block">
+    <div class="ind-number">3</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Babchi (Psoralea Corylifolia)</h3>
       <p>A legendary Ayurvedic herb used to restore skin’s elasticity, reduce inflammation, and strengthen the skin barrier. Especially beneficial for skin conditions like eczema and psoriasis, it supports deep skin regeneration.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">4</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Fennel Seed</h3>
+  <div class="ind-block">
+    <div class="ind-number">4</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Fennel Seed</h3>
       <p>A traditional digestive aid packed with fiber to feed good bacteria and promote smoother digestion. By supporting nutrient absorption, fennel contributes to healthy skin and reduced inflammation.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">5</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Inulin (Prebiotic Fiber)</h3>
+  <div class="ind-block">
+    <div class="ind-number">5</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Inulin (Prebiotic Fiber)</h3>
       <p>A plant-based prebiotic that fuels your beneficial gut bacteria, improving digestive health and nutrient absorption. This helps keep your skin hydrated, elastic, and visibly youthful.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">6</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Fenugreek</h3>
+  <div class="ind-block">
+    <div class="ind-number">6</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Fenugreek</h3>
       <p>Rich in antioxidants and anti-inflammatory compounds, fenugreek promotes digestive balance while helping regulate blood sugar. It reduces oxidative stress, supporting clear and vibrant skin.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">7</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Lemon Balm</h3>
-      <p>This calming herb soothes your digestive system and reduces stress — both of which impact your skin. Its antiviral and antioxidant benefits help shield your skin from environmental stressors.</p>
+  <div class="ind-block">
+    <div class="ind-number">7</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Lemon Balm</h3>
+      <p>This calming herb soothes your digestive system and reduces stress — both of which impact your skin. Its antiviral and antioxidant bens help shield your skin from environmental stressors.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">8</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Organic Ceylon Ginger</h3>
+  <div class="ind-block">
+    <div class="ind-number">8</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Organic Ceylon Ginger</h3>
       <p>A premium, anti-inflammatory spice that stimulates digestion and supports a healthy microbiome. Its antioxidant power helps clarify skin and reduce puffiness for a more vibrant appearance.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">9</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Organic Lion’s Mane Mushroom</h3>
+  <div class="ind-block">
+    <div class="ind-number">9</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Organic Lion’s Mane Mushroom</h3>
       <p>A powerful nootropic that also supports gut health by nurturing healthy bacteria. Its antioxidant profile enhances brain clarity while helping the skin fight oxidative stress and premature aging.</p>
     </div>
   </div>
 
-  <div class="ingredient-block">
-    <div class="ingredient-number">10</div>
-    <div class="ingredient-text">
-      <h3 class="ingredient-heading">Slippery Elm Bark</h3>
+  <div class="ind-block">
+    <div class="ind-number">10</div>
+    <div class="ind-text">
+      <h3 class="ind-heading">Slippery Elm Bark</h3>
       <p>A time-tested remedy that soothes the digestive lining and reduces gut inflammation. This calming effect also extends to the skin, helping ease redness, irritation, and sensitivity.</p>
     </div>
   </div>
@@ -1578,7 +1604,7 @@ src="money-back.webp"
     </p>
 
     <p><strong>How Many Bottles of PrimeBiome Should I Order?</strong><br>
-      Most customers order 3 to 6 bottles to maximize the benefits of PrimeBiome over time. Our best value pack includes 6 bottles, free shipping, and 2 exclusive guides to help you get the most out of your supplement. Ordering in bulk saves money and ensures you don’t run out while experiencing results.
+      Most customers order 3 to 6 bottles to maximize the bens of PrimeBiome over time. Our best value pack includes 6 bottles, free shipping, and 2 exclusive guides to help you get the most out of your supplement. Ordering in bulk saves money and ensures you don’t run out while experiencing results.
     </p>
 
     <p><strong>How Do I Use PrimeBiome Supplement?</strong><br>
@@ -1704,7 +1730,7 @@ src="money-back.webp"
     <div class="footer-nav">
       <a href="#what-is-primebiome">What is PrimeBiome?</a>
       <a href="#how-primebiome-works">How Does PrimeBiome Work?</a>
-      <a href="#primebiome-ingredients">PrimeBiome Ingredients</a>
+      <a href="#primebiome-inds">PrimeBiome inds</a>
       <a href="#top">PrimeBiome</a>
     </div>
 
