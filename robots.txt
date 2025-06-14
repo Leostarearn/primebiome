@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /drafts/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://primebiome.leostarearn.com/sitemap_index.xml
