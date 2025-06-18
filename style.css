@@ -1060,7 +1060,7 @@ section ol {
   margin-top: 15px;
   font-size: 1rem;
 }
-}
+
 /* ✅ Mobile Fix: Reduce All H2 Sizes Including "Why Choose ProDentim" */
 @media (max-width: 768px) {
   /* Applies to Why Choose ProDentim */
@@ -1090,13 +1090,11 @@ section ol {
   }
 }
 
-
     /* ✅ Add this at the bottom */
   .btn-primary {
     font-size: 1.1rem;
     padding: 12px 20px;
   }
-}   
 
 /* ========== [MQ-600] Section Header Resize for Small Devices ========== */
 @media (max-width: 600px) {
