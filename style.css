@@ -1,4 +1,3 @@
-<style>
      /* ===== Base Reset and Global Styles ===== */
   * {
     box-sizing: border-box;
@@ -1059,7 +1058,7 @@ section ol {
   margin-top: 15px;
   font-size: 1rem;
 }
-
+}
 /* ✅ Mobile Fix: Reduce All H2 Sizes Including "Why Choose ProDentim" */
 @media (max-width: 768px) {
   /* Applies to Why Choose ProDentim */
@@ -1180,5 +1179,3 @@ section ol {
     text-align: left;
   }
 }
-
-  </style>
