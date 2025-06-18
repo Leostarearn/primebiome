@@ -1079,6 +1079,74 @@ section ol {
     font-size: 1.18rem !important;
   }
 }
+/* ✅ Fix for "Why Choose PrimeBiome" mobile alignment */
+@media (max-width: 768px) {
+  .trust-icons-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .trust-icon-item {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .trust-icon-item img {
+    display: block;
+    margin: 0 auto 12px;
+    width: 120px !important;
+    height: auto;
+  }
+
+  .trust-icon-item h3,
+  .trust-icon-item p {
+    text-align: center !important;
+    font-size: 1.1rem !important;
+  }
+
+  .trust-icons-section .section-header h2 {
+    text-align: center !important;
+    font-size: 1.6rem !important;
+    line-height: 1.3;
+  }
+}
+
+/* ✅ Desktop fallback styling (optional) */
+@media (min-width: 769px) {
+  .trust-icons-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 40px;
+  }
+
+  .trust-icon-item {
+    flex: 0 0 200px;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  .trust-icon-item img {
+    width: 100px;
+    margin-bottom: 12px;
+  }
+
+  .trust-icon-item h3 {
+    font-size: 1.32rem !important;
+    margin-bottom: 6px;
+  }
+
+  .trust-icon-item p {
+    font-size: 1.1rem;
+  }
+}
 
   
 /* ✅ Ultra Small Device Tweak */
