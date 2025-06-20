@@ -45,10 +45,17 @@
   <div class="content-wrapper content-wrapper--hero">
 <div class="hero-image">
   <picture>
+    <!-- 📱 Mobile-optimized responsive images -->
     <source 
-      srcset="primebiome-supplement-3.webp 600w" 
+      srcset="
+        primebiome-supplement-3.webp 350w,
+        primebiome-supplement-2.webp 700w,
+        primebiome-supplement-1.webp 800w
+      "
       media="(max-width: 768px)" 
       type="image/webp" />
+
+    <!-- 💻 Desktop fallback image -->
     <img 
       src="primebiome-supplement.webp" 
       alt="PrimeBiome supplement" 
@@ -57,14 +64,12 @@
       decoding="async"
       width="1104" 
       height="1127"
-      srcset="
-        primebiome-supplement-3.webp 600w,
-        primebiome-supplement.webp 1104w
-      "
-      sizes="(max-width: 768px) 100vw, (min-width: 769px) 600px"
+      srcset="primebiome-supplement.webp 1104w"
+      sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
     />
   </picture>
 </div>
+
     <div class="hero-content">
       <h1>PrimeBiome</h1>
       <p class="subheadline">
@@ -525,32 +530,47 @@ src="money-back.webp"
     </div>
   </div>
 </section>
+<!-- Final CTA Section -->
 <section class="final-cta full-width-section" style="text-align: center;">
+
+  <!-- Branded headline background -->
   <div class="section-header">
-  <div class="inner">
-    <h2>Ready To Feel Lighter, Healthier & Radiant?</h2>
+    <div class="inner">
+      <h2>What Happens When You Chew One PrimeBiome Gummy a Day?</h2>
+    </div>
   </div>
-  </div>
+
+  <!-- Centered content area -->
   <div class="content-wrapper">
-    <div>
-  <picture>
-    <source 
-      srcset="primebiome-supplement-3.webp" 
-      media="(max-width: 768px)" 
-      type="image/webp" />
-    <img 
-      src="primebiome-supplement.webp"
-      alt="PrimeBiome supplement for bloating, skin, and gut health"
-      width="350"
-      height="350"
-      loading="lazy"
-      decoding="async"
-      style="max-width:100%; height:auto; margin-top: 20px;" />
-  </picture>
-</div>
-    <p style="margin: 20px 0; font-size: 1.125rem;">
-      Join thousands of UK women who’ve already discovered the <strong>gut-skin transformation</strong> with PrimeBiome. Feel lighter, clearer, and more confident every single day.
+
+    <!-- 📷 Optimized Responsive Image -->
+    <div class="cta-image" style="margin-top: 20px;">
+      <picture>
+        <source 
+          srcset="
+            primebiome-supplement-3.webp 350w,
+            primebiome-supplement-2.webp 700w
+          " 
+          media="(max-width: 768px)" 
+          type="image/webp" />
+        
+        <img 
+          src="primebiome-supplement.webp"
+          alt="PrimeBiome supplement for bloating, skin, and gut health"
+          width="1104"
+          height="1127"
+          loading="lazy"
+          decoding="async"
+          style="width: 100%; max-width: 400px; height: auto; margin-top: 20px;" />
+      </picture>
+    </div>
+
+    <!-- Short persuasive copy -->
+    <p style="margin: 15px 0; font-size: 1.125rem;">
+    Each delicious <strong>PrimeBiome</strong> gummy delivers gut-balancing probiotics that help reduce bloating, clear your skin, and boost your energy from within. It’s the easiest daily habit for women who want to feel lighter, glow naturally, and take control of their gut–skin connection.
     </p>
+
+    <!-- Final CTA Button -->
     <div style="margin-bottom: 40px;">
       <a 
         href="https://getprimebiome.com/text.php?affiliate=leostare&tid=ouk" 
@@ -563,9 +583,10 @@ src="money-back.webp"
         Claim Your Exclusive UK Discount Now
       </a>
     </div>
-    
+
   </div>
 </section>
+
 <div class="footer-separator full-width-bar"></div>
   <footer class="footer">
     <div class="footer-nav">
