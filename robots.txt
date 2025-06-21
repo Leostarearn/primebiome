@@ -3,4 +3,7 @@ Disallow: /drafts/
 Disallow: /private/
 Allow: /
 
+Sitemap: https://primebiome.leostarearn.com/sitemap.xml
+Sitemap: https://primebiome.leostarearn.com/uk/sitemap.xml
+Sitemap: https://primebiome.leostarearn.com/au/sitemap.xml
 Sitemap: https://primebiome.leostarearn.com/sitemap_index.xml
